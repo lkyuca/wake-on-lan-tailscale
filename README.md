@@ -40,7 +40,7 @@ My BIOS (AMI Aptio) has **no Wake-on-LAN option** at all. That turned out not to
 
 | Main | Advanced | Boot | Security |
 |---|---|---|---|
-| <img src="images/10-bios-main.jpg" width="100%"> | <img src="images/11-bios-advanced.jpg" width="100%"> | <img src="images/12-bios-boot.jpg" width="100%"> | <img src="images/13-bios-security.jpg" width="100%"> |
+| <img width="2000" height="1126" alt="10-bios-main" src="https://github.com/user-attachments/assets/ec946fb2-3024-4eea-ad76-31fd90055e41" />  | <img width="2000" height="1126" alt="11-bios-advanced" src="https://github.com/user-attachments/assets/8cc57e90-a27d-48ce-94a3-b282496e2609" /> | <img width="2000" height="1126" alt="12-bios-boot" src="https://github.com/user-attachments/assets/89472da4-89af-458a-9011-2a8b38e6aff1" /> | <img width="2000" height="1126" alt="13-bios-security" src="https://github.com/user-attachments/assets/8ea13622-8c51-42ae-bfbc-4dc3d64da414" /> |
 
 </details>
 
