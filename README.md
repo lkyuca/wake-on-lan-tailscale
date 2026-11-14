@@ -108,6 +108,13 @@ Install Tailscale, sign in and approve the device. I used GitHub as the login me
 |---|---|---|
 | <img src="images/01-tailscale-authorize.jpg" width="100%"> | <img src="images/02-tailscale-connect-device.jpg" width="100%"> | <img src="images/03-tailscale-login-success.jpg" width="100%"> |
 
+<img width="1126" height="2000" alt="01-tailscale-authorize" src="https://github.com/user-attachments/assets/3be93d58-ffb2-4616-9840-6516fbf4e6f9" />
+
+<img width="1126" height="2000" alt="02-tailscale-connect-device" src="https://github.com/user-attachments/assets/d5f3ac00-1505-4c64-8b43-ab6b93501738" />
+
+<img width="1126" height="2000" alt="03-tailscale-login-success" src="https://github.com/user-attachments/assets/972aa0b2-dee2-4c1b-8a7b-22c3ce832973" />
+
+
 ### 2.2 Termux and SSH
 
 Install Termux. I recommend the F-Droid build, and if you want Termux:Boot later it must come from the same source as Termux itself. Then:
