@@ -118,7 +118,7 @@ Install Tailscale, sign in and approve the device. I used GitHub as the login me
 
 | Authorize | Connect device | Login successful |
 |---|---|---|
-| <img src="images/01-tailscale-authorize.jpg" width="100%"> | <img src="images/02-tailscale-connect-device.jpg" width="100%"> | <img src="images/03-tailscale-login-success.jpg" width="100%"> |
+| <img src="https://github.com/user-attachments/assets/3be93d58-ffb2-4616-9840-6516fbf4e6f9" width="100%" alt="Authorize"> | <img src="https://github.com/user-attachments/assets/d5f3ac00-1505-4c64-8b43-ab6b93501738" width="100%" alt="Connect device"> | <img src="https://github.com/user-attachments/assets/972aa0b2-dee2-4c1b-8a7b-22c3ce832973" width="100%" alt="Login successful"> |
 
 <img width="1126" height="2000" alt="01-tailscale-authorize" src="https://github.com/user-attachments/assets/3be93d58-ffb2-4616-9840-6516fbf4e6f9" />
 
