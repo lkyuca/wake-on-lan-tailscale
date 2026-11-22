@@ -1,4 +1,3 @@
-<img width="900" height="2000" alt="04-termux-install-packages" src="https://github.com/user-attachments/assets/1f3d4e6b-6f43-41f9-8a61-6685eea474cb" />
 # wake-on-lan-tailscale
 here i will show you how i configured wol on my home server
 
@@ -42,10 +41,6 @@ My BIOS (AMI Aptio) has **no Wake-on-LAN option** at all. That turned out not to
 | Main | Advanced | Boot | Security |
 |---|---|---|---|
 | <img width="2000" height="1126" alt="10-bios-main" src="https://github.com/user-attachments/assets/ec946fb2-3024-4eea-ad76-31fd90055e41" />  | <img width="2000" height="1126" alt="11-bios-advanced" src="https://github.com/user-attachments/assets/8cc57e90-a27d-48ce-94a3-b282496e2609" /> | <img width="2000" height="1126" alt="12-bios-boot" src="https://github.com/user-attachments/assets/89472da4-89af-458a-9011-2a8b38e6aff1" /> | <img width="2000" height="1126" alt="13-bios-security" src="https://github.com/user-attachments/assets/8ea13622-8c51-42ae-bfbc-4dc3d64da414" /> |
-
-
-
-
 
 </details>
 
@@ -113,7 +108,6 @@ Install Tailscale, sign in and approve the device. I used GitHub as the login me
 |---|---|---|
 | <img src="https://github.com/user-attachments/assets/3be93d58-ffb2-4616-9840-6516fbf4e6f9" width="100%" alt="Authorize"> | <img src="https://github.com/user-attachments/assets/d5f3ac00-1505-4c64-8b43-ab6b93501738" width="100%" alt="Connect device"> | <img src="https://github.com/user-attachments/assets/972aa0b2-dee2-4c1b-8a7b-22c3ce832973" width="100%" alt="Login successful"> |
 
-
 ### 2.2 Termux and SSH
 
 Install Termux. I recommend the F-Droid build, and if you want Termux:Boot later it must come from the same source as Termux itself. Then:
@@ -123,10 +117,7 @@ pkg update && pkg upgrade
 pkg install -y openssh python
 ```
 
-<img width="900" height="2000" alt="04-termux-install-packages" src="https://github.com/user-attachments/assets/896657cd-7695-4a7c-b379-9dddf169bbd1" />
-
-
-<img src="images/04-termux-install-packages.jpg" width="280">
+<img src="https://github.com/user-attachments/assets/896657cd-7695-4a7c-b379-9dddf169bbd1" width="280" alt="Installing openssh and python in Termux">
 
 Set a password, start the SSH server and check your username:
 
@@ -136,10 +127,7 @@ sshd
 whoami
 ```
 
-<img width="900" height="2000" alt="05-termux-passwd-sshd" src="https://github.com/user-attachments/assets/49ae069d-9304-449d-a2de-458ab01b0daa" />
-
-
-<img src="images/05-termux-passwd-sshd.jpg" width="280">
+<img src="https://github.com/user-attachments/assets/49ae069d-9304-449d-a2de-458ab01b0daa" width="280" alt="Setting a password and starting sshd in Termux">
 
 Termux's SSH server listens on port **8022**. Note the username `whoami` prints (something like `u0_a160`). That is your `PHONE_USER`.
 
@@ -182,10 +170,7 @@ termux-wake-lock
 sshd
 ```
 
-<img width="900" height="2000" alt="06-android-background-limits" src="https://github.com/user-attachments/assets/62a277ce-131f-40f0-8d64-8bdef22e684b" />
-
-
-<img src="images/06-android-background-limits.jpg" width="280">
+<img src="https://github.com/user-attachments/assets/62a277ce-131f-40f0-8d64-8bdef22e684b" width="280" alt="Android background usage limits">
 
 *My screenshot is in Dutch: "Ongebruikte apps laten sluimeren" is switched off, and the lists show 1 sleeping and 9 deep-sleeping apps. Check those lists on your phone.*
 
@@ -212,10 +197,7 @@ cat ~/.ssh/id_ed25519.pub | ssh -p 8022 PHONE_USER@100.107.77.17 "mkdir -p ~/.ss
 
 The first connection asks whether you trust the host. Type `yes`, then enter the password you set with `passwd`.
 
-<img width="923" height="2000" alt="07-a56-host-key-prompt" src="https://github.com/user-attachments/assets/cda8bbe6-8501-4cca-8c22-a9fbbf49f132" />
-
-
-<img src="images/07-a56-host-key-prompt.jpg" width="280">
+<img src="https://github.com/user-attachments/assets/cda8bbe6-8501-4cca-8c22-a9fbbf49f132" width="280" alt="SSH host key prompt on the A56">
 
 > **Username note:** in my test the connection also worked with a made-up username (`u0_aXXX`), so Termux's SSH server does not seem to check it. I still use the real `whoami` output to avoid confusion.
 
@@ -241,11 +223,7 @@ You should see `Magic packet verstuurd`. Before the wake-up, the server shows as
 
 | Server offline | Packet sent |
 |---|---|
-
-<img width="923" height="2000" alt="08-wake-sh-magic-packet" src="https://github.com/user-attachments/assets/9eede683-4637-4f96-92ac-fc604a60fb4b" />
-
-
-| <img src="images/09-tailscale-server-offline.jpg" width="100%"> | <img src="images/08-wake-sh-magic-packet.jpg" width="100%"> |
+| <img src="PASTE_09_URL_HERE" width="100%" alt="Tailscale app showing the server offline"> | <img src="https://github.com/user-attachments/assets/9eede683-4637-4f96-92ac-fc604a60fb4b" width="100%" alt="wake.sh printing Magic packet verstuurd"> |
 
 3. Wait 1 to 2 minutes until the server turns green in Tailscale, then connect:
 
@@ -293,13 +271,7 @@ sudo systemctl suspend
 
 | Placeholder not replaced, host key prompt skipped | `sudo` error and `Permission denied` |
 |---|---|
-
-<img width="923" height="2000" alt="15-error-sudo-permission-denied" src="https://github.com/user-attachments/assets/0dc7e5f2-03c2-4149-9f98-a3c85cd17e53" />
-<img width="923" height="2000" alt="14-error-placeholder-host-key" src="https://github.com/user-attachments/assets/5571f4e9-2f9f-4ff7-ac9b-82413401f82a" />
-
-
-
-| <img src="images/14-error-placeholder-host-key.jpg" width="100%"> | <img src="images/15-error-sudo-permission-denied.jpg" width="100%"> |
+| <img src="https://github.com/user-attachments/assets/5571f4e9-2f9f-4ff7-ac9b-82413401f82a" width="100%" alt="Error: placeholder not replaced and host key prompt skipped"> | <img src="https://github.com/user-attachments/assets/0dc7e5f2-03c2-4149-9f98-a3c85cd17e53" width="100%" alt="Error: sudo and permission denied"> |
 
 </details>
 
