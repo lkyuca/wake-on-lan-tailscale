@@ -1,3 +1,4 @@
+<img width="900" height="2000" alt="04-termux-install-packages" src="https://github.com/user-attachments/assets/1f3d4e6b-6f43-41f9-8a61-6685eea474cb" />
 # wake-on-lan-tailscale
 here i will show you how i configured wol on my home server
 
@@ -122,6 +123,9 @@ pkg update && pkg upgrade
 pkg install -y openssh python
 ```
 
+<img width="900" height="2000" alt="04-termux-install-packages" src="https://github.com/user-attachments/assets/896657cd-7695-4a7c-b379-9dddf169bbd1" />
+
+
 <img src="images/04-termux-install-packages.jpg" width="280">
 
 Set a password, start the SSH server and check your username:
@@ -131,6 +135,9 @@ passwd
 sshd
 whoami
 ```
+
+<img width="900" height="2000" alt="05-termux-passwd-sshd" src="https://github.com/user-attachments/assets/49ae069d-9304-449d-a2de-458ab01b0daa" />
+
 
 <img src="images/05-termux-passwd-sshd.jpg" width="280">
 
@@ -175,6 +182,9 @@ termux-wake-lock
 sshd
 ```
 
+<img width="900" height="2000" alt="06-android-background-limits" src="https://github.com/user-attachments/assets/62a277ce-131f-40f0-8d64-8bdef22e684b" />
+
+
 <img src="images/06-android-background-limits.jpg" width="280">
 
 *My screenshot is in Dutch: "Ongebruikte apps laten sluimeren" is switched off, and the lists show 1 sleeping and 9 deep-sleeping apps. Check those lists on your phone.*
@@ -202,6 +212,9 @@ cat ~/.ssh/id_ed25519.pub | ssh -p 8022 PHONE_USER@100.107.77.17 "mkdir -p ~/.ss
 
 The first connection asks whether you trust the host. Type `yes`, then enter the password you set with `passwd`.
 
+<img width="923" height="2000" alt="07-a56-host-key-prompt" src="https://github.com/user-attachments/assets/cda8bbe6-8501-4cca-8c22-a9fbbf49f132" />
+
+
 <img src="images/07-a56-host-key-prompt.jpg" width="280">
 
 > **Username note:** in my test the connection also worked with a made-up username (`u0_aXXX`), so Termux's SSH server does not seem to check it. I still use the real `whoami` output to avoid confusion.
@@ -228,6 +241,10 @@ You should see `Magic packet verstuurd`. Before the wake-up, the server shows as
 
 | Server offline | Packet sent |
 |---|---|
+
+<img width="923" height="2000" alt="08-wake-sh-magic-packet" src="https://github.com/user-attachments/assets/9eede683-4637-4f96-92ac-fc604a60fb4b" />
+
+
 | <img src="images/09-tailscale-server-offline.jpg" width="100%"> | <img src="images/08-wake-sh-magic-packet.jpg" width="100%"> |
 
 3. Wait 1 to 2 minutes until the server turns green in Tailscale, then connect:
@@ -276,6 +293,12 @@ sudo systemctl suspend
 
 | Placeholder not replaced, host key prompt skipped | `sudo` error and `Permission denied` |
 |---|---|
+
+<img width="923" height="2000" alt="15-error-sudo-permission-denied" src="https://github.com/user-attachments/assets/0dc7e5f2-03c2-4149-9f98-a3c85cd17e53" />
+<img width="923" height="2000" alt="14-error-placeholder-host-key" src="https://github.com/user-attachments/assets/5571f4e9-2f9f-4ff7-ac9b-82413401f82a" />
+
+
+
 | <img src="images/14-error-placeholder-host-key.jpg" width="100%"> | <img src="images/15-error-sudo-permission-denied.jpg" width="100%"> |
 
 </details>
