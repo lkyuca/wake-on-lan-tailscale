@@ -9,7 +9,7 @@ I run a small Ubuntu Server on an old laptop (called `homeserver` in this guide)
 
 ```mermaid
 flowchart LR
-    Galaxy A56["A56 (anywhere)<br/>Tailscale + Termux"] -- "SSH over Tailscale" --> Galaxy A53["A53 (home, on charger)<br/>Tailscale + Termux + sshd"]
+    A56["A56 (anywhere)<br/>Tailscale + Termux"] -- "SSH over Tailscale" -->  A53["A53 (home, on charger)<br/>Tailscale + Termux + sshd"]
     A53 -- "magic packet (LAN broadcast)" --> S["Server laptop<br/>Ubuntu Server"]
 ```
 
