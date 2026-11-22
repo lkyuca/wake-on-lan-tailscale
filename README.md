@@ -17,7 +17,7 @@ flowchart LR
 |---|---|---|
 |Galaxy A53 | stays at home on the charger, sends the magic packet | `100.107.77.17` |
 |Galaxy A56 | my remote control, goes everywhere with me | `100.72.187.86` |
-|ubuntu Server (laptop) | gets woken up | `100.74.193.68` |
+|Ubuntu Server (laptop) | gets woken up | `100.74.193.68` |
 
 **Placeholders used below:** `SERVER_USER` is your login on the server, `PHONE_USER` is the output of `whoami` in Termux on the A53, and `AA:BB:CC:DD:EE:FF` is the server's MAC address.
 
