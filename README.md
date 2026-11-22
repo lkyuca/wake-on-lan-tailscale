@@ -223,8 +223,7 @@ You should see `Magic packet verstuurd`. Before the wake-up, the server shows as
 
 | Server offline | Packet sent |
 |---|---|
-| <img width="923" height="2000" alt="09-tailscale-server-offline" src="https://github.com/user-attachments/assets/572b25b7-1e53-4949-a986-ea02389cd2a9" />
-| <img src="https://github.com/user-attachments/assets/9eede683-4637-4f96-92ac-fc604a60fb4b" width="100%" alt="wake.sh printing Magic packet verstuurd"> |
+| <img src="https://github.com/user-attachments/assets/572b25b7-1e53-4949-a986-ea02389cd2a9" width="100%" alt="Tailscale app showing the server offline"> | <img src="https://github.com/user-attachments/assets/9eede683-4637-4f96-92ac-fc604a60fb4b" width="100%" alt="wake.sh printing Magic packet verstuurd"> |
 
 3. Wait 1 to 2 minutes until the server turns green in Tailscale, then connect:
 
